@@ -1,6 +1,28 @@
 # Prerequisites
 *.d
 
+# Visual Studio Specific Stuff
+*.sln
+*.user
+*.vcxproj
+*.filters
+*.pdb
+*.idb
+*.log
+*.ilk
+*.recipe
+*.tlog
+*.lastbuildstate
+*.json
+*.sqlite
+*.db
+*.suo 
+*.testlog
+*.manifest
+*.ipch
+*.lock
+*.vsidx
+
 # Compiled Object files
 *.slo
 *.lo
