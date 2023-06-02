@@ -1,6 +1,11 @@
 #include "Application.h"
 
 Application::Application() {
+	
+	// Time Variables
+	deltaTime = 0.0f;
+	lastFrame = 0.0f;
+	
 	//	Initialize the GLFW library
 	if (!glfwInit()) {
 		std::cout << "GLFW Failed to Initialize..." << std::endl;
@@ -44,11 +49,17 @@ Application::Application() {
 }
 
 void Application::Input() {
+	
+	float currentFrame = glfwGetTime();
+	deltaTime = currentFrame - lastFrame;
+	lastFrame = currentFrame;
+	
 	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
 		glfwSetWindowShouldClose(window, true);
 }
 
 void Application::Run() {
+	
 	while (!glfwWindowShouldClose(window)) {
 		Input();
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);

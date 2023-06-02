@@ -14,4 +14,8 @@ class Application {
 
 		// Window Pointer
 		GLFWwindow* window;
+
+		// Time
+		float deltaTime;
+		float lastFrame;
 };
